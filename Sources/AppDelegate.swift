@@ -116,6 +116,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         menu.addItem(.separator())
         menu.addItem(keysItem)
         menu.addItem(.separator())
+        let support = NSMenuItem(title: L("Ủng hộ tác giả ☕", "Buy me a coffee ☕"), action: #selector(openSupport), keyEquivalent: "")
+        support.target = self
+        menu.addItem(support)
         menu.addItem(NSMenuItem(title: L("Thoát XBright", "Quit XBright"), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
     }
 
@@ -129,6 +132,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         guard let display = displayUnderCursor() else { return }
         display.set(display.percent + direction * keyStep)
         rows[display.key]?.show(display.percent)
+    }
+
+    @objc private func openSupport() {
+        NSWorkspace.shared.open(URL(string: "https://buymeacoffee.com/devhontran")!)
     }
 
     @objc private func toggleKeys() {

@@ -59,6 +59,10 @@ Because the app is ad-hoc signed, macOS treats every new build as a different ap
 - Apple displays (Studio Display, Pro Display XDR) are not handled; macOS already controls those
 - Intel Macs are not supported
 
+## Support
+
+XBright is free. If it saves you a reach for the monitor buttons, you can [buy me a coffee](https://buymeacoffee.com/devhontran).
+
 ## License
 
 MIT
