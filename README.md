@@ -9,7 +9,7 @@ It talks DDC/CI to the monitor over the display cable, so it does the same thing
 - One slider per external monitor in the menu bar
 - Brightness keys (F1/F2) adjust the monitor under the mouse pointer, 5% per press
 - Command line: `XBright get` and `XBright set <0-100> [display-index]`
-- About 400 lines of Swift, no dependencies
+- 440 lines of Swift, no dependencies
 
 ## Requirements
 
