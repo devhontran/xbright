@@ -49,7 +49,7 @@ Because the app is ad-hoc signed, macOS treats every new build as a different ap
 ```sh
 /Applications/XBright.app/Contents/MacOS/XBright get
 /Applications/XBright.app/Contents/MacOS/XBright set 60      # all monitors
-/Applications/XBright.app/Contents/MacOS/XBright set 60 1    # monitor 1 only
+/Applications/XBright.app/Contents/MacOS/XBright set 60 1    # only the monitor with index 1 in `get` (indexes start at 0)
 ```
 
 ## Limits
