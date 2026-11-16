@@ -62,7 +62,7 @@ final class Display {
             return Display(
                 key: "\(ddc.vendor)-\(ddc.product)-\(ddc.serial)-\(index)",
                 displayID: screen?.id,
-                name: ddc.edidName ?? screen?.name ?? L("Màn hình \(index + 1)", "Display \(index + 1)"),
+                name: [ddc.edidName, screen?.name].compactMap { $0 }.first { !$0.isEmpty } ?? L("Màn hình \(index + 1)", "Display \(index + 1)"),
                 service: ddc.service,
                 maxValue: ddc.maxValue,
                 percent: ddc.percent
