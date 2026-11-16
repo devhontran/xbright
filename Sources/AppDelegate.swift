@@ -125,7 +125,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private func displayUnderCursor() -> Display? {
         let point = NSEvent.mouseLocation
         let id = NSScreen.screens.first { $0.frame.contains(point) }?.displayID
-        return displays.first { $0.displayID != nil && $0.displayID == id } ?? (displays.count == 1 ? displays[0] : nil)
+        return displays.first { $0.displayID != nil && $0.displayID == id } ?? (displays.count == 1 && id.map(CGDisplayIsBuiltin) != 1 ? displays[0] : nil)
     }
 
     private func step(_ direction: Int) {
